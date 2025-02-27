@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moulins Volley</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <noscript>
+        <div class="no-javascript">
+            JavaScript est désactivé sur votre navigateur. Certaines fonctionnalités de ce site peuvent ne pas fonctionner correctement.
+        </div>
+    </noscript>
+    <nav id="nav" class="active">
+        <a href="index.html" class="logo">
+            <img src="assets/M3Vlogo.png" alt="Logo">
+        </a>
+        <ul>
+            <li><a href="index.html" class="link">Le club</a></li>
+            <li class="deroulant">
+                <a href="equipes.html" class="link">Equipes</a>
+                <div class="menu-deroulant">
+                    <a href="regionalM.html">Régional Masculin</a>
+                    <a href="prF.html">Pré-Régional Féminin</a>
+                    <a href="M18F.html">M18 Féminin</a>
+                    <a href="M18M.html">M18 Masculin</a>
+                    <a href="loisir.html">Loisir</a>
+                </div>
+            </li>
+            <li><a href="licence.html" class="link">Licence</a></li>
+            <li class="deroulant">
+                <a href="mon_espace.html" class="link">Mon espace</a>
+                <div class="menu-deroulant">
+                    <a href="connexion.html">Connexion</a>
+                    <a href="inscription.html">Inscription</a>
+                </div>
+            </li>
+        </ul>
+        <div id="icons"></div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="form-container">
+                <form id="signup-form" action="./htbin/register.py" method="post">
+                    <h1>Créer un compte</h1>
+                    <label for="lastname">Nom* : <input name="lastname" id="lastname" type="text" placeholder="Nom" required></label>
+                    <p id="alert-lastname" style="display: none;"></p>
+                    <label for="firstname">Prénom* : <input name="firstname" id="firstname" type="text" placeholder="Prénom" required></label>
+                    <p id="alert-firstname" style="display: none;"></p>
+                    <label for="birthdate">Date de naissance : <input name="birthdate" id="birthdate" type="text" placeholder="Date de naissance"></label>
+                    <p id="alert-birthdate" style="display: none;"></p>
+                    <label for="username">Nom d'utilisateur* : <input name="username" id="username" type="text" minlength="6" placeholder="Nom d'utilisateur" required></label>
+                    <p id="alert-username" style="display: none;"></p>
+                    <label for="userpwd">Mot de passe* : <input name="userpwd" id="userpwd" type="password" placeholder="Mot de passe" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-_;:!?./*&$]).{12,}$" required></label>
+                    <p id="alert-userpwd" style="display: none;"></p>
+                    <label for="useremail">Email* : <input name="useremail" id="useremail" type="email" placeholder="Adresse email" required></label>
+                    <p id="alert-useremail" style="display: none;"></p>
+                    <button type="submit" class="inscription-button">S'inscrire</button>
+                    <p>* Champs obligatoires</p>
+                </form>
+            </div>
+        </div>    
+    </main>
+    <footer>
+        <p>
+            En cas de daltonisme veuillez choisir l'option qui correspond : 
+            <a href="javascript:(function(){document.body.style.filter='url(&quot;data:image/svg+xml;utf8,<svg%20xmlns=\'http://www.w3.org/2000/svg\'><filter%20id=\'protanopia\'><feColorMatrix%20type=\'matrix\'%20values=\'0.56667%200.43333%200.00000%200%200%200.55833%200.44167%200.00000%200%200%200.00000%200.24167%200.75833%200%200%200%200%200%201%200\'/></filter></svg>#protanopia&quot;)';})()">Protanopie</a>,
+            <a href="javascript:(function(){document.body.style.filter='url(&quot;data:image/svg+xml;utf8,<svg%20xmlns=\'http://www.w3.org/2000/svg\'><filter%20id=\'deuteranopia\'><feColorMatrix%20type=\'matrix\'%20values=\'0.625%200.375%200%200%200%200.7%200.3%200%200%200%200%200.3%200.7%200%200%200%200%200%201%200\'/></filter></svg>#deuteranopia&quot;)';})()">Deutéranopie</a>, 
+            <a href="javascript:(function(){document.body.style.filter='url(&quot;data:image/svg+xml;utf8,<svg%20xmlns=\'http://www.w3.org/2000/svg\'><filter%20id=\'tritanopia\'><feColorMatrix%20type=\'matrix\'%20values=\'0.95%200.05%200%200%200%200%200.433%200.567%200%200%200%200.475%200.525%200%200%200%200%200%201%200\'/></filter></svg>#tritanopia&quot;)';})()">Tritanopie</a>, 
+            <a href="javascript:(function(){document.body.style.filter='url(&quot;data:image/svg+xml;utf8,<svg%20xmlns=\'http://www.w3.org/2000/svg\'><filter%20id=\'achromatomaly\'><feColorMatrix%20type=\'matrix\'%20values=\'0.618%200.320%200.062%200%200%200.163%200.775%200.062%200%200%200.163%200.320%200.516%200%200%200%200%200%201%200\'/></filter></svg>#achromatomaly&quot;)';})()">Achromatomalie</a>, 
+            <a href="javascript:(function(){document.body.style.filter='url(&quot;data:image/svg+xml;utf8,<svg%20xmlns=\'http://www.w3.org/2000/svg\'><filter%20id=\'achromatopsia\'><feColorMatrix%20type=\'matrix\'%20values=\'0.299%200.587%200.114%200%200%200.299%200.587%200.114%200%200%200.299%200.587%200.114%200%200%200%200%200%201%200\'/></filter></svg>#achromatopsia&quot;)';})()">Monochromie</a>.
+        </p>
+        <img alt="sponsor1" src="assets/sponsor/centresoudure.png">
+        <img alt="sponsor2" src="assets/sponsor/ecoutervoir.png">
+        <img alt="sponsor3" src="assets/sponsor/cbfloc.png">
+    </footer>
+    <script src="script.js"></script>
+    <script src="inscription.js"></script>
+</body>
+</html>
